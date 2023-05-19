@@ -4,33 +4,109 @@
   <title>Akshay</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
     }
     
     header {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
     }
     
     h1 {
-      margin: 0;
-      font-size: 24px;
+        margin: 0;
+        font-size: 24px;
     }
     
     main {
-      padding: 20px;
+        padding: 20px;
     }
     
     footer {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
     }
+    .gmail {
+        border: none;
+        background-color: rgba(255, 0, 0, 0.904);
+        /* additional styles */
+        color: rgb(1, 1, 1);
+        padding: 10px 20px;
+        font-weight: bold;
+        transition: all 0.5s ease;
+        border-radius: 5px;
+    }
+    .linkedin {
+        background-color: rgb(0, 191, 255);
+        /* additional styles */
+        color: rgb(14, 14, 14);
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: all 0.5s ease;
+        border: none;
+    }
+
+    button:hover {
+        background-color: rgb(255, 255, 255);
+        /* additional styles for hover effect */
+    }
+    body {
+        /*background-image: url('h.avif');*/
+        background-size: cover;
+        /* additional styles */
+        color:bisque;
+        text-align: justify;
+        animation: gradient-animation 8s infinite cubic-bezier(0.42, 0, 0.58, 1);
+    }
+@keyframes typing {
+  0% { width: 0; }
+  100% { width: 50%; }
+}
+
+.typing-animation {
+  position: relative;
+  animation: typing 5s steps(100, end);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.typing-animation::after {
+  content: '|';
+  position: absolute;
+  right: 0;
+  width: 8px; /* Adjust the width to control the thickness of the cursor */
+  height: 1.2em; /* Adjust the height to control the height of the cursor */
+  background-color: #ffffff; /* Adjust the color of the cursor */
+}
+
+@keyframes cursor-blink {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.fade-in {
+  animation: fade-in 5s;
+  
+}
+@keyframes gradient-animation {
+    0% { background: linear-gradient(to right, #000000, #ffffff); }
+  25% { background: linear-gradient(to right, #1e1e1e, #cfcfcf); }
+  50% { background: linear-gradient(to right, #3c3c3c, #c0c0c1); }
+  75% { background: linear-gradient(to right, #2a2a2a, #cdcdcd); }
+  100% { background: linear-gradient(to right, #232323, #dedede); }
+}
+
   </style>
 </head>
 <body>
@@ -40,8 +116,8 @@
   
   <main>
     <h2>About Me</h2>
-    <p>Hello I am Akshay studying at College of Engineering __________, and also a tech hobbist</p>
-    
+    <p class="typing-animation">Hello I am Akshay studying at College of Engineering __________, and also a tech hobbist.</p>
+    <div class="fade-in">
     <h2>Projects</h2>
     <ul>
       <li>
@@ -63,11 +139,11 @@
         </ul>
       </li>
     </ul>
-    
+    </div>
     <h2>Contact</h2>
     <p>You can reach me at </p>
-    <button name="Gmail"></button>
-    <button name="LinkedIn"></button>
+    <button class="gmail">Gmail&nbsp;&nbsp;&nbsp;</button>
+    <button class="linkedin">LinkedIn</button>
   </main>
   
   <footer>
